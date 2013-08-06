@@ -1,0 +1,19 @@
+<project name="guava-gwt-gradle-problem" default="compile" basedir=".">
+    <description>
+        Example of how the compile suceeds using ant
+    </description>
+
+  <target name="compile" depends="clean">
+    <javac srcdir="src/main/java" destdir="ant-build" includeantruntime="false">
+      <classpath>
+        <fileset dir="lib" includes="*.jar" />
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="clean">
+    <delete dir="ant-build"/>
+    <mkdir dir="ant-build"/>
+  </target>
+
+</project>
